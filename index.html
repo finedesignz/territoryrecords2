@@ -3,6 +3,7 @@
     <title>Territory Records</title>
     <script src="<https://cdn.tryretool.com/embed.js>"> </script>
      <script>
+      /*
        const queryString = window.location.search;
        const urlParams = new URLSearchParams(queryString);
        const CongNo = (urlParams.get('CongNo')) ? "?CongNo="+urlParams.get('CongNo') : "";
@@ -11,6 +12,7 @@
        
        const account =  window.location.host.split('.')[1] ? window.location.host.split('.')[0] : false;
        console.log(account);
+       */
     </script>
   </head>
   <body>
@@ -18,10 +20,11 @@
     <div style="height: 1000px; width: 100%;" id='container'></div>
 
     <script>
-      var url = (account == "admin" ? "https://theleadingpractice.retool.com/embedded/public/cc23f70b-ff99-46a7-a76d-f5a023891542" : "https://theleadingpractice.retool.com/embedded/public/9f4a3b60-8dd5-4dea-84e1-050122a451ad"+CongNo+PassCode+Email);
+      //var url = (account == "admin" ? "https://theleadingpractice.retool.com/embedded/public/cc23f70b-ff99-46a7-a76d-f5a023891542" : "https://theleadingpractice.retool.com/embedded/public/9f4a3b60-8dd5-4dea-84e1-050122a451ad"+CongNo+PassCode+Email);
+      
       var nurl = "https://theleadingpractice.retool.com/embedded/public/9f4a3b60-8dd5-4dea-84e1-050122a451ad";
-      var rt = window.retool.RetoolDashboard(document.getElementById('container'), nurl)
-      //window.location.href = url;
+      var rt = window.retool.RetoolDashboard(document.getElementById('container'), nurl);
+      
     </script>
   </body>
 </html>
