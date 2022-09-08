@@ -6,7 +6,7 @@
       
        const queryString = window.location.search;
        const urlParams = new URLSearchParams(queryString);
-       const CongNo = (urlParams.get('CongNo')) ? "?CongNo="+urlParams.get('CongNo') : "";
+       const CongNo = (urlParams.get('CongNo')) ? "&CongNo="+urlParams.get('CongNo') : "";
        const PassCode = (urlParams.get('PassCode')) ? "&PassCode="+urlParams.get('PassCode') : "";
        const Email = (urlParams.get('Email')) ? "&Email="+urlParams.get('Email') : "";
        
@@ -22,7 +22,7 @@
     <div style="height: 1000px; width: 100%;" id='container'></div>
 
     <script>
-      var url = (account == "admin" ? "https://theleadingpractice.retool.com/embedded/public/cc23f70b-ff99-46a7-a76d-f5a023891542"+CongNo+PassCode+Email : "https://theleadingpractice.retool.com/embedded/public/9f4a3b60-8dd5-4dea-84e1-050122a451ad"+CongNo+PassCode+Email);
+      var url = (account == "admin" ? "https://theleadingpractice.retool.com/embedded/public/cc23f70b-ff99-46a7-a76d-f5a023891542?_releaseVersion=latest"+CongNo+PassCode+Email : "https://theleadingpractice.retool.com/embedded/public/9f4a3b60-8dd5-4dea-84e1-050122a451ad?_releaseVersion=latest"+CongNo+PassCode+Email);
       
       var nurl = 'https://theleadingpractice.retool.com/embedded/public/9f4a3b60-8dd5-4dea-84e1-050122a451ad';
       var rt = window.retool.RetoolDashboard(document.getElementById('container'), url);
