@@ -17,11 +17,7 @@
     <div id='container'></div>
 
     <script>
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition((position) => { 
-          window.geoloc = position
-        }, (error) => { console.error(error); });
-      } 
+
       var rt = window.retool.RetoolDashboard(document.getElementById('container'), "https://theleadingpractice.retool.com/embedded/public/9f4a3b60-8dd5-4dea-84e1-050122a451ad?_releaseVersion=latest");
       
     </script>
