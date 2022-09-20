@@ -21,8 +21,11 @@
     <div id='container'></div>
 
     <script>
+       const account =  window.location.host.split('.')[1] ? window.location.host.split('.')[0] : false;
+       console.log(account);
+      var url = (account == "admin" ? "https://theleadingpractice.retool.com/embedded/public/cc23f70b-ff99-46a7-a76d-f5a023891542" : "https://theleadingpractice.retool.com/embedded/public/9f4a3b60-8dd5-4dea-84e1-050122a451ad");
 
-      var rt = window.retool.RetoolDashboard(document.getElementById('container'), "https://theleadingpractice.retool.com/embedded/public/9f4a3b60-8dd5-4dea-84e1-050122a451ad?_releaseVersion=latest");
+      var rt = window.retool.RetoolDashboard(document.getElementById('container'), url);
       
     </script>
   </body>
